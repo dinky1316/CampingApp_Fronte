@@ -1,6 +1,10 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    // Add the dependency for the Google services Gradle plugin
+    id("com.google.gms.google-services") version "4.3.15" apply false
+//    id 'kotlin-kapt'
+
 }
 
 android {
@@ -14,7 +18,9 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        // dex 파일 갯수 제한을 풀어주는 코드.
+//        multiDexEnabled true
     }
 
     buildTypes {
@@ -27,15 +33,34 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility=JavaVersion.VERSION_17
+        targetCompatibility=JavaVersion.VERSION_17
     }
+
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget=JavaVersion.VERSION_17.toString()
+    }
+
+    viewBinding {
+        enable = true
     }
 }
 
 dependencies {
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.2.0"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
+
+    // second add
+//    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+//    implementation 'androidx.multidex:multidex:2.0.1'
+//    implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
+//    implementation 'com.google.firebase:firebase-firestore-ktx:24.0.0'
+//    implementation 'com.google.firebase:firebase-storage-ktx:20.0.0'
+//    implementation 'com.github.bumptech.glide:glide:4.12.0'
+//    implementation 'com.firebaseui:firebase-ui-storage:8.0.0'
+//    implementation 'com.github.bumptech.glide:compiler:4.12.0'
+//    implementation 'com.google.firebase:firebase-messaging-ktx:23.0.0'
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
