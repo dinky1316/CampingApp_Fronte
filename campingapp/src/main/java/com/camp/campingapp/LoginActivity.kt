@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
             //인증 여부 확인.
             if(MyApplication.checkAuth()){
                 //인증 완료시 AddActivity로 이동
-                startActivity(Intent(this, BoardActivity::class.java))
+                startActivity(Intent(this, Board::class.java))
             }else {
                 //인증실패시 토스트 알림
                 Toast.makeText(this, "인증진행해주세요..", Toast.LENGTH_SHORT).show()
@@ -48,7 +48,7 @@ class LoginActivity : AppCompatActivity() {
             //반대
             binding.logoutTextView.visibility= View.GONE
             binding.mainRecyclerView.visibility= View.VISIBLE
-            makeRecyclerView()
+//            makeRecyclerView()
         }
     }
 
