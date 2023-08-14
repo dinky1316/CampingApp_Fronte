@@ -74,7 +74,7 @@ class BoardDetail : AppCompatActivity() {
             if (docId != null) {
                 MyApplication.db.collection("Boards").document(docId)
                     .delete()
-                val intent = intent //인텐트
+                val intent = Intent(this, Board::class.java)
                 startActivity(intent) //액티비티 열기
                 overridePendingTransition(0, 0) //인텐트 효과 없애기
                 finish() //인텐트 효과 없애기

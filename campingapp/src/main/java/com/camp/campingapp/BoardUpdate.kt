@@ -1,5 +1,6 @@
 package com.camp.campingapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.camp.campingapp.databinding.ActivityBoardUpdateBinding
@@ -34,7 +35,7 @@ class BoardUpdate : AppCompatActivity() {
                 MyApplication.db.collection("Boards").document(docId).update(data)
             }
             overridePendingTransition(0, 0) //인텐트 효과 없애기
-            val intent = intent //인텐트
+            val intent = Intent(this, Board::class.java)
             startActivity(intent) //액티비티 열기
             overridePendingTransition(0, 0) //인텐트 효과 없애기
             finish()
