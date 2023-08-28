@@ -30,6 +30,7 @@ class BoardAdapter(private val context: Context, private val itemList: List<Boar
             itemTitleView.text = data.title
             itemContentView.text = data.content
             itemDateView.text = data.date
+            itemUsernameView.text = data.username // Add this line for username
 
             val imageUrl = data.imageUrl
             if (imageUrl != null) {

@@ -34,6 +34,7 @@ class BoardWrite : AppCompatActivity() {
         storage = FirebaseStorage.getInstance()
 
         binding.postbtn.setOnClickListener {
+            // Save the data including username
             saveStore()
             finish()
         }
@@ -66,15 +67,19 @@ class BoardWrite : AppCompatActivity() {
     }
 
     private fun saveStore() {
+        // Get the username from your authentication system
+        val username = "User123" // Replace with actual username retrieval
+
         val data = mapOf(
             "title" to binding.title.text.toString(),
             "content" to binding.addEditView.text.toString(),
-            "date" to dateToString(Date())
+            "date" to dateToString(Date()),
+            "username" to username // Add username to data
         )
+
         db.collection("Boards")
             .add(data)
             .addOnSuccessListener { documentReference ->
-                // 업로드한 이미지의 URL을 Firestore에 저장한 후, Document ID를 사용하여 업데이트합니다.
                 val docId = documentReference.id
                 uploadImage(docId)
             }
@@ -82,7 +87,6 @@ class BoardWrite : AppCompatActivity() {
                 Toast.makeText(this, "error!!", Toast.LENGTH_SHORT).show()
             }
     }
-
     private fun uploadImage(docId: String) {
         val storageRef = storage.reference
         val imgRef = storageRef.child("images/${docId}.jpg")
