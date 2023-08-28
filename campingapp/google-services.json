@@ -1,79 +1,42 @@
 {
   "project_info": {
-    "project_number": "752509786029",
-    "firebase_url": "https://androidtest-d3991-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "androidtest-d3991",
-    "storage_bucket": "androidtest-d3991.appspot.com"
+    "project_number": "925543431913",
+    "firebase_url": "https://campingpro-66e71-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "campingpro-66e71",
+    "storage_bucket": "campingpro-66e71.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:752509786029:android:cee1ace9733a8e045fb324",
-        "android_client_info": {
-          "package_name": "com.android4.travel"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "752509786029-i4l1etajvsjqhhmbhgiun1iguphbtpkn.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.android4.travel",
-            "certificate_hash": "81e010b71285551671a2f057a1a042fd07d49dba"
-          }
-        },
-        {
-          "client_id": "752509786029-ubgcavs5k4o03u4h89eq0hbu9ch92gsg.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyC-jniiYmCmT8kAIFrZKxTRlf6R64V1CpY"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "752509786029-tvgsi6umg760mdvsllslm4ukugg7cisl.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:752509786029:android:f3cb70320ee799fc5fb324",
+        "mobilesdk_app_id": "1:925543431913:android:86c609b1cad814dab93a78",
         "android_client_info": {
           "package_name": "com.camp.campingapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "752509786029-4ircgu5pe27hr7mcpo3cgo1r4vja7beu.apps.googleusercontent.com",
+          "client_id": "925543431913-v1ke8d0dvfvp8v2eocuour70o2gaktf0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.camp.campingapp",
-            "certificate_hash": "81e010b71285551671a2f057a1a042fd07d49dba"
+            "certificate_hash": "6068b808ed77138052a9faabd47838864090aa2e"
           }
         },
         {
-          "client_id": "752509786029-ubgcavs5k4o03u4h89eq0hbu9ch92gsg.apps.googleusercontent.com",
+          "client_id": "925543431913-u0375nvkocbeb3sht2amp25s17u7cvmc.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC-jniiYmCmT8kAIFrZKxTRlf6R64V1CpY"
+          "current_key": "AIzaSyCW4sIyv5VBJB6Egene1zGhi_Zfq4ojKSk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "752509786029-tvgsi6umg760mdvsllslm4ukugg7cisl.apps.googleusercontent.com",
+              "client_id": "925543431913-u0375nvkocbeb3sht2amp25s17u7cvmc.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -51,7 +51,7 @@ class MyApplication: MultiDexApplication() {
 
     val retrofit: Retrofit
         get() = Retrofit.Builder()
-            .baseUrl("http://118.38.227.161:8083/")
+            .baseUrl("http://10.100.103.49:8083/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

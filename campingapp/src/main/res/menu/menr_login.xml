@@ -4,5 +4,6 @@
         android:id="@+id/action_login"
         android:title="로그인"
         android:orderInCategory="100"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        android:icon="@drawable/person"/>
 </menu>

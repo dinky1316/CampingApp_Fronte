@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.camp.campingapp.MyApplication.Companion.auth
 import com.camp.campingapp.databinding.ActivityChatMainBinding
 import com.camp.campingapp.model.User
 import com.camp.campingapp.recycler.UserAdapter
@@ -68,13 +70,14 @@ class ChatMainActivity : AppCompatActivity() {
                 //실패 시 실행
             }
         })
-    } //onCreate
+        // ActionBar에 뒤로가기 버튼 활성화
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
 
+
+    }//oncreate닫음
+
+    // ActionBar의 뒤로가기 버튼 클릭 시 호출되는 메서드
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == R.id.log_out){
             auth.signOut()
@@ -83,6 +86,26 @@ class ChatMainActivity : AppCompatActivity() {
             finish()
             return true
         }
-        return true
+        if (item.itemId == android.R.id.home) {
+            onBackPressed() // 이전 화면으로 돌아가기
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        if(item.itemId == R.id.log_out){
+//            auth.signOut()
+//            val intent = Intent(this@ChatMainActivity, LoginActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//            return true
+//        }
+//        return true
+//    }
 }
